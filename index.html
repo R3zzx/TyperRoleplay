@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Typer Roleplay">
+    <meta property="og:description" content="เว็ปไซต์ Typer Roleplay!">
+    <meta property="og:image" content="https://cdn.discordapp.com/attachments/1413840621239664670/1413841482011512852/E0BCF77.png?ex=68bd65fd&is=68bc147d&hm=8b0de5f59e596b3fed6f16b0dd58aaff56cf75690e1f7829fd9d51cfc6207c9d&">
+    <meta property="og:url" content="https://typerroleplay.netlify.app/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Typer Roleplay">
+    <meta name="twitter:description" content="เว็ปไซต์ Typer Roleplay!">
+    <meta name="twitter:image" content="https://cdn.discordapp.com/attachments/1406589243500793927/1407034744528572721/1330_16E4D94.png?ex=68a54b78&is=68a3f9f8&hm=6751cb8c28ea89a54d5b3730f69fd79e5214ee5c651591227e7dc97cd7f2be4a&">
+    <title>Typer Roleplay</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image/png" href="https://cdn.discordapp.com/attachments/1413840621239664670/1413841217531416698/1319_EE7B621.png?ex=68bd65be&is=68bc143e&hm=951bc6345c5fabe2a14ed07bee129758ded3f116c7f3968e8055905ca692dfac&">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        body {background-color: #0d1117;color: #c9d1d9;font-family: 'Kanit', sans-serif;margin: 0;padding: 0;overflow-x: hidden;scroll-behavior: smooth;}
+        header {display: flex;justify-content: space-between;align-items: center;padding: 15px 50px;background: rgba(13, 17, 23, 0.7);backdrop-filter: blur(10px);border-bottom: 2px solid #30363d;position: fixed;width: 100%;top: 0;z-index: 1000;box-sizing: border-box;}
+        .logo img {height: 50px;width: auto;transition: transform 0.3s ease;}
+        .logo img:hover {transform: scale(1.1);}
+        nav ul {list-style: none;display: flex;margin: 0;padding: 0;}
+        nav ul li {margin-left: 35px;}
+        nav ul li a {color: #c9d1d9;text-decoration: none;font-size: 1.1em;font-weight: 500;padding: 10px 15px;border-radius: 5px;transition: all 0.3s ease;letter-spacing: 1px;text-transform: uppercase;}
+        nav ul li a:hover, nav ul li a.active {background: #0077ff;color: #0d1117;}
+        .home-section {padding-top: 80px;}
+        .hero {position: relative;text-align: center;padding: 120px 20px;background: url('https://cdn.discordapp.com/attachments/1413840621239664670/1413841482011512852/E0BCF77.png?ex=68bd65fd&is=68bc147d&hm=8b0de5f59e596b3fed6f16b0dd58aaff56cf75690e1f7829fd9d51cfc6207c9d&') no-repeat center center/cover;animation: fadeIn 2s ease-in-out;}
+        .hero::after {content: '';position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: linear-gradient(to bottom,     rgba(13, 17, 23, 0.5), rgba(13, 17, 23, 1));}
+        .hero-content {position: relative;z-index: 2;}
+        .hero-content h1 {font-size: 4.5em;margin: 0;color: #fff;}
+        .heart-animated-text {position: relative;display: inline-block;}
+        .heart-animated-text::after {content: '';position: absolute;width: 20px;height: 20px;background-size: contain;background-repeat: no-repeat;animation: orbit 4s linear infinite;}
+        @keyframes orbit {0% {transform: translate(60px, 10px) rotate(0deg) translateX(60px) rotate(0deg);}25% {transform: translate(0, -40px) rotate(90deg) translateX(60px) rotate(-90deg);}50% {transform: translate(-60px, 10px) rotate(180deg) translateX(60px) rotate(-180deg);}75% {transform: translate(0, 60px) rotate(270deg) translateX(60px) rotate(-270deg);}100% {transform: translate(60px, 10px) rotate(360deg) translateX(60px) rotate(-360deg);}}
+        .hero-content p {font-size: 1.6em;color: #c9d1d9;font-weight: 300;}
+        .team-container {max-width: 1200px;margin: 60px auto;padding: 20px;text-align: center;}
+        .team-container h2 {font-size: 3.5em;margin-bottom: 50px;color: #0077ff;animation: slideInUp 1s forwards;opacity: 0;}
+        .team-grid {display: grid;grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));gap: 40px;}
+        .team-member {background: #161b22;border: 1px solid #30363d;border-radius: 15px;padding: 25px;transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;opacity: 0;transform: translateY(50px);animation: slideInUp 0.5s forwards;}
+        .team-member:nth-child(2) {animation-delay: 0.2s;}
+        .team-member:nth-child(3) {animation-delay: 0.4s;}
+        .team-member:hover {transform: translateY(-10px);border-color: #0077ff;}
+        .member-photo img {width: 150px;height: 150px;border-radius: 50%;border: 3px solid #0077ff;object-fit: cover;margin-bottom: 20px;transition: transform 0.3s ease;}
+        .team-member:hover .member-photo img {transform: scale(1.05);}
+        .member-info h3 {font-size: 1.8em;margin: 10px 0 5px;color: #fff;font-weight: 700;}
+        .member-info h4 {font-size: 1.1em;margin: 0 0 15px;color: #0077ff;font-weight: 400;}
+        .member-info p {font-size: 1em;line-height: 1.6;color: #c9d1d9;font-weight: 300;}
+        @keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
+        @keyframes slideInUp {from {opacity: 0;transform: translateY(50px);}to {opacity: 1;transform: translateY(0);}}
+        .rules-container {max-width: 1000px;margin: auto;text-align: left;}
+        .rule-item {background: #161b22;border: 1px solid #30363d;border-radius: 12px;padding: 15px 20px;margin: 12px 0;font-size: 1.1em;line-height: 1.6;transition: transform 0.2s ease, border-color 0.2s ease;}
+        .rule-item i {color: #0077ff;margin-right: 10px;}
+        .rule-item:hover {transform: translateX(8px);border-color: #0077ff;}
+        .discord-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(135deg, #5865F2, #3b4cca);
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 600;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(88, 101, 242, 0.5);
+}
+.discord-btn i {
+    font-size: 1.6em;
+}
+.discord-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(88, 101, 242, 0.8);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="#home">
+                <img src="https://cdn.discordapp.com/attachments/1413840621239664670/1413841217531416698/1319_EE7B621.png?ex=68bd65be&is=68bc143e&hm=951bc6345c5fabe2a14ed07bee129758ded3f116c7f3968e8055905ca692dfac&" alt="Your Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home" class="active">HOME</a></li>
+                <li><a href="#rule">RULE</a></li>
+                <li><a href="#game">GAME</a></li>
+                <li><a href="#social">SOCIAL</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <section id="home" class="home-section">
+        <div class="hero">
+            <div class="hero-content">
+                <h1><span class="heart-animated-text">Typer</span>Roleplay</h1>
+                <p>แมพ Roleplay ที่สำผัสการเล่นโรล์เพลย์!</p>
+            </div>
+        </div>
+        <div class="team-container">
+            <h2>TEAM : ทีมงาน</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://tr.rbxcdn.com/30DAY-Avatar-882AF8A375CFE4D98BB44C9D6978A92F-Png/352/352/Avatar/Webp/noFilter" alt="Team Member 1">
+                    </div>
+                    <div class="member-info">
+                        <h3>Vega เวก้า</h3>
+                        <h4>CEO</h4>
+                        <p>ผู้ควบคุมการปฏิบัติหน้าที่ของ Developer & Admin ผู้ควบคุมสูงสุด</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://tr.rbxcdn.com/30DAY-Avatar-DAF163DAC1BE752BC507492794405938-Png/352/352/Avatar/Webp/noFilter" alt="Team Member 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>N9x นายเอ็กซ์</h3>
+                        <h4>Owner</h4>
+                        <p>ผู้พัฒนา Code และ Design / Script Model/Map Gui Vfx</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://cdn.discordapp.com/attachments/1394277356838977632/1413847455258378260/Screenshot_2025-03-15_150302.png?ex=68bd6b8d&is=68bc1a0d&hm=4fc8076fe12e9be8302452d3ad9cf89f838652d41ef1a0e065c9b87b4eb568e2&" alt="Team Member 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mankaew มันแกว</h3>
+                        <h4>Developer</h4>
+                        <p>ผู้พัฒนา Map building Vfx</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://tr.rbxcdn.com/30DAY-Avatar-0F4E5EFDA224AA4EC8485CB7481D84BF-Png/352/352/Avatar/Webp/noFilter" alt="Team Member 3">
+                    </div>
+                    <div class="member-info">
+                        <h3>Hapare ฮาปาเร่</h3>
+                        <h4>Graphic Designer</h4>
+                        <p>ออกแบบเรื่องกราฟฟิค โลโก้ แบรนเนอร์ และดูแลเรื่องไวริส</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://tr.rbxcdn.com/30DAY-Avatar-AEFE7AAB95B4721964F28FF41F3D48A1-Png/352/352/Avatar/Webp/noFilter" alt="Team Member 3">
+                    </div>
+                    <div class="member-info">
+                        <h3>Kapom กระปอม</h3>
+                        <h4>Admin</h4>
+                        <p>ดูแล discord ทั้งหมด</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://cdn.discordapp.com/attachments/1413832130462744638/1413847095147892736/images.jpg?ex=68bd6b37&is=68bc19b7&hm=409ffa4064b7d3fbb2fd34f40f42a8400c4ddd274792ba381141cd5b248e986d&" alt="Team Member 3">
+                    </div>
+                    <div class="member-info">
+                        <h3>Patrick แพททริค</h3>
+                        <h4>Admin</h4>
+                        <p>ดูแลหน่วยงาน</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://cdn.discordapp.com/attachments/1413832130462744638/1413846507265720391/IMG_20250415_175301_747.webp?ex=68bd6aab&is=68bc192b&hm=d18b9a571073f7bd32624d21f52415e47c5b2e015c6e7f2169f7938e571bc7c6&" alt="Team Member 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>Whale วาฬ</h3>
+                        <h4>Admin</h4>
+                        <p>ดูแล Ticket Support Player</p>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-photo">
+                        <img src="https://cdn.discordapp.com/attachments/1413832130462744638/1413847036100481024/IMG_4713.jpg?ex=68bd6b29&is=68bc19a9&hm=3a90153b288c2b0c7e8372b67a03fe81cfe57cb2145f0fc66ed390faffddf50f&" alt="Team Member 2">
+                    </div>
+                    <div class="member-info">
+                        <h3>Pim พิมพ์</h3>
+                        <h4>Admin</h4>
+                        <p>ดูแล Ticket Support Player</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rule" style="padding: 120px 20px; text-align: center; background-color: #0d1117;">
+        <h2 style="font-size: 3em; color: #0077ff; margin-bottom: 40px;">RULES & REGULATIONS</h2>
+        <div class="rules-container">
+            <div class="rule-item"><i class="fas fa-user"></i> <b>IC [ IN CHARACTER ]</b> - คือการสวมบทบาทหรือการเข้าไปใช้ชีวิตในตัวละครเกม (ในเกมเท่านั้น)</div>
+            <div class="rule-item"><i class="fas fa-user-slash"></i> <b>OC [ OUT OF CHARACTER ]</b> - อยู่นอกบทบาทหรือนอกตัวละครในเกม (หรือนอกเกม)</div>
+            <div class="rule-item"><i class="fas fa-exchange-alt"></i> <b>MG [ META GAMING ]</b> - การนำ IC และ OC มาปะปนกัน (ไม่มีตักเตือน)</div>
+            <div class="rule-item"><i class="fas fa-bolt"></i> <b>PG [ POWERGAMING ]</b> - เล่นเหนือมนุษย์ เช่น กระโดดตึก, ใช้โปรแกรมแปลงเสียง (ตักเตือน 2 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-skull-crossbones"></i> <b>DM [ DEATHMATCH ]</b> - การทำร้ายหรือฆ่าโดยไม่มีสตอรี่ (ตักเตือน 1 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-ban"></i> <b>BK [ BREAKING ROLEPLAY ]</b> - การเล่นไม่สมจริง เช่น ออกเกมหนีเคส (ไม่มีตักเตือน)</div>
+            <div class="rule-item"><i class="fas fa-angry"></i> <b>TC [ TOXIC ]</b> - การไม่เคารพผู้เล่น ด่าทอ เหยียด บูลลี่ (ไม่มีตักเตือน)</div>
+            <div class="rule-item"><i class="fas fa-bug"></i> <b>CT [ CHEAT ]</b> - การใช้โปรแกรมโกง / บัค (ตักเตือน 1 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-car-crash"></i> <b>DB [ DRIVE BY ]</b> - ใช้พาหนะทำดาเมจใส่ผู้เล่น (ตักเตือน 1 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-crosshairs"></i> <b>SK [ SPAWN KILL ]</b> - ฆ่าดักจุดเกิด (ตักเตือน 1 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-shield-alt"></i> <b>SAFEZONE</b> - พื้นที่ปลอดภัย ห้ามมีสตอรี่หรือฆ่ากัน (ตักเตือน 2 ครั้ง)</div>
+            <div class="rule-item"><i class="fas fa-video"></i> <b>STREAM SNIPE</b> - ดักสตรีมเมอร์ (ไม่มีตักเตือน)</div>
+            <div class="rule-item"><i class="fas fa-theater-masks"></i> <b>ROLEPLAY</b> - ผู้เล่น 1 คน = 1 ROLE หากเกิน โดนใบแดงทันที!</div>
+        </div>
+    </section>
+    <section id="game" style="padding: 120px 20px; text-align: center; background-color: #161b22;">
+        <h2 style="font-size: 3em; color: #0077ff; margin-bottom: 40px;">GAME OVERVIEW</h2>
+        <div class="rules-container">
+            <h3 style="color:#fff; font-size:2em; margin-bottom:20px;">กฎแต่งกาย</h3>
+            <div class="rule-item"><b>ห้ามแต่งกายผิดมนุษย์</b> - ห้ามแต่ง Avartar ที่ไม่ใช่มนุษย์ เช่น วัว หมา กา ไก่ เป็นต้น</div>
+            <div class="rule-item"><b>ห้ามแต่งกายไม่ครบสัดส่วน</b> - ห้ามแต่ง Avartar หัวหาย ขาหาย แขนหาย ตัวหาย หรืออื่นๆ (ยกเว้น Headless กับ Karblox)</div>
+            <div class="rule-item"><b>ห้ามแต่งกายสัดส่วนไม่เท่ากัน</b> - การแต่งกายที่ปรับแขนขาใหญ่ตัวเล็ก หรือขนาดไม่เท่ากัน (ยกเว้นหัวใหญ่ ตัวเล็ก แต่ห้ามใหญ่เกิน)</div>
+            <h3 style="color:#fff; font-size:2em; margin:40px 0 20px;">กฎระเบียบ</h3>
+            <div class="rule-item"><b>ต้องตั้งชื่อใน DC ให้ตรงกับใน Map</b> - ต้องตั้งชื่อ IC ให้ตรงกับหน้าสร้างตัวละครในเกม ปรับ 100K</div>
+            <div class="rule-item"><b>ห้ามใช้ช่องโหว่กฎประเทศเพื่อหาผลประโยชน์</b> - กฎไม่พอเพียงหรือไม่รองรับ ผู้เล่นใช้เพื่อหาผลประโยชน์ ไม่มีตักเตือน</div>
+            <div class="rule-item"><b>ห้ามโพสรูป OC ลงใน IC</b> - การนำรูป OC มาโพสในทวิตหรือช่องพูดคุยใน DC นับว่า MG</div>
+            <div class="rule-item"><b>หมิ่นประเทศ</b> - การด่าประเทศเชิงลบ ทำให้เสียหาย เชิญออกประเทศ ไม่มีตักเตือน</div>
+            <div class="rule-item"><b>ห้ามใช้บัค Emote เพื่อผลประโยชน์</b> - การทำบัคท่าทางเพื่อหนีหรือเอื้อประโยชน์แก่ตนเอง นับว่า PG ตักเตือน 2 ครั้ง</div>
+            <div class="rule-item"><b>เจตนาฟลัดทวิต</b> - การฟลัดทวิตแสปมข้อความ สร้างความรำคาญ ปรับ 1M</div>
+            <div class="rule-item"><b>ขโมยรถในเซฟโซน</b> - การขี่หรือขโมยรถในเซฟโซน เช่น การาจ เรเบล งานขาว โดนตำรวจจับ จำคุก 15 นาที และปรับ 500K</div>
+            <div class="rule-item"><b>การบูสต์ไมค์หรือก่อกวนทางเสียง</b> - การปรับไมค์ให้ดังเกิน ใช้โปรแกรม เช่น SoundPad ก่อกวนทางเสียง ตักเตือน 1 ครั้ง</div>
+            <div class="rule-item"><b>รถหายหรือโดนขโมย</b> - ห้ามพาวด์รถทุกกรณี หากไม่มั่นใจให้โพสทวิตถาม หากไม่มีการตอบสามารถพาวได้</div>
+        </div>
+    </section>
+    <section id="social" style="height: 500px; padding: 120px 20px; text-align: center; background-color: #0d1117;">
+        <h2 style="font-size: 3em; color: #0077ff; margin-bottom: 40px;">SOCIAL & COMMUNITY</h2>
+        <div style="margin-top: 60px;">
+                <a href="https://discord.gg/74GdRYGdF8" target="_blank" class="discord-btn">
+                <i class="fab fa-discord"></i> เข้าร่วม Discord
+            </a>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+            window.addEventListener('scroll', ()=> {
+                let current = '';
+                sections.forEach( section => {
+                    const sectionTop = section.offsetTop;
+                    if (pageYOffset >= (sectionTop - 95)) { 
+                        current = section.getAttribute('id');
+                    }
+                })
+                navLinks.forEach( a => {
+                    a.classList.remove('active');
+                    if(a.getAttribute('href') == '#' + current){
+                        a.classList.add('active');
+                    }
+                })
+            });
+        });
+    </script>
+</body>
+</html>
